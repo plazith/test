@@ -18,8 +18,9 @@ jyu shichi
 jyu hachi
 jyu ku
 ni jyu
-21
-22
-23
-24
-25
+ni jyu ichi
+ni jyu ni
+ni jyu san
+ni jyu shi
+ni jyu go
+owari
