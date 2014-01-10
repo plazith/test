@@ -19,7 +19,11 @@ def sort_by_count(dictionary, assending=True):
                 key=operator.itemgetter(1),
                 reverse=not assending)
 
-
-x = open('numbers.txt', 'r')
+y = {}
+x = open('war_and_peace.txt', 'r')
 for thing in x.readlines():
-	print thing
+	if y.has_key(thing):
+		y[thing] = y[thing] + 1
+	else:
+		y[thing] = 1
+print sort_by_count(y)
