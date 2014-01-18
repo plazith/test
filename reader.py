@@ -22,8 +22,11 @@ def sort_by_count(dictionary, assending=True):
 y = {}
 x = open('war_and_peace.txt', 'r')
 for thing in x.readlines():
-	if y.has_key(thing):
-		y[thing] = y[thing] + 1
-	else:
-		y[thing] = 1
-print sort_by_count(y)
+    print thing
+    # The following is good thinking. But, let's to a tiny step
+    # first. Let's first try to get this line split up into pieces.
+    #if y.has_key(thing):
+    #    y[thing] = y[thing] + 1
+    #else:
+    #    y[thing] = 1
+#print sort_by_count(y)
