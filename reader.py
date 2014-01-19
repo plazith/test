@@ -19,9 +19,9 @@ def sort_by_count(dictionary, assending=True):
                 key=operator.itemgetter(1),
                 reverse=not assending)
 
-y = {}
-x = open('war_and_peace.txt', 'r')
-for line in x.readlines():
+count = {}
+book = open('war_and_peace.txt', 'r')
+for line in book.readlines():
 	line = line.strip()
 	for word in line.split(' '):
 		word = word.lower()
@@ -29,9 +29,9 @@ for line in x.readlines():
 		if word == '':
 			continue
 
-		if y.has_key(word):
-			y[word] = y[word] + 1
+		if word in count:
+			count[word] = count[word] + 1
 		else:
-			y[word] = 1
-thing = sort_by_count(y, False)
+			count[word] = 1
+thing = sort_by_count(count, False)
 print thing[0:9]
