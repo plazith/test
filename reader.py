@@ -1,6 +1,6 @@
 import operator
 
-def sort_by_count(dictionary, assending):
+def sort_by_count(dictionary, assending=True):
   """Take a dictionary and return sorted tuples by value
   
   Example:
@@ -11,8 +11,6 @@ def sort_by_count(dictionary, assending):
   >>> sort_by_count(data)
   [('orange', 1), ('red', 3), ('blue', 20)]
   """
-  if assending is None:
-      assending = False
 
   # To make certain this is used correctly
   assert isinstance(dictionary, dict)
@@ -35,5 +33,5 @@ for line in book.readlines():
 			count[word] = count[word] + 1
 		else:
 			count[word] = 1
-thing = sort_by_count(count, False)
+thing = sort_by_count(count, assending=False)
 print thing[0:9]
