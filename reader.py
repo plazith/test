@@ -22,9 +22,16 @@ def sort_by_count(dictionary, assending=True):
 y = {}
 x = open('war_and_peace.txt', 'r')
 for line in x.readlines():
+	line = line.strip()
 	for word in line.split(' '):
+		word = word.lower()
+		word = word.replace("'", "")
+		if word == '':
+			continue
+
 		if y.has_key(word):
 			y[word] = y[word] + 1
 		else:
 			y[word] = 1
-print sort_by_count(y)
+thing = sort_by_count(y, False)
+print thing[0:9]
