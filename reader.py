@@ -1,6 +1,6 @@
 import operator
 
-def sort_by_count(dictionary, assending=True):
+def sort_by_count(dictionary, assending):
   """Take a dictionary and return sorted tuples by value
   
   Example:
@@ -11,6 +11,8 @@ def sort_by_count(dictionary, assending=True):
   >>> sort_by_count(data)
   [('orange', 1), ('red', 3), ('blue', 20)]
   """
+  if assending is None:
+      assending = False
 
   # To make certain this is used correctly
   assert isinstance(dictionary, dict)
